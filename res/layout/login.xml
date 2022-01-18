@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+
+        android:backgroundTint="#7030A0"
+        android:text="로그인" />
+
+    <Button
+        android:id="@+id/memberjoin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#7030A0"
+        android:text="회원가입" />
+
+    <EditText
+        android:id="@+id/InputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ID"
+        android:layout_alignLeft="@id/ID"
+        android:layout_marginLeft="110dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/InputPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/password"
+        android:layout_alignLeft="@id/password"
+        android:layout_marginLeft="110dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/mark"
+        android:layout_width="144dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@id/InputId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:src="@drawable/intro" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/loginbutton"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="180dp"
+        android:text="PASSWORD"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/password"
+        android:layout_alignLeft="@id/password"
+        android:layout_alignBottom="@id/password"
+        android:layout_marginBottom="40dp"
+        android:text="ID"
+        android:textSize="20sp" />
+
+</RelativeLayout>

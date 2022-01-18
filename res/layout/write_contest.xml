@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".WriteContestActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        //소개버튼!!!!!!!!!!!!!
+    <EditText
+        android:id="@+id/introduce_edittext"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@id/introduce_textview"
+        android:layout_alignBaseline="@id/introduce_textview"
+        android:background="@layout/memo_border"
+        android:layout_marginLeft="10dp"
+        android:gravity="top"
+        android:textSize="15sp"
+        android:hint=" (500자)"
+         />
+
+    <TextView
+        android:id="@+id/introduce_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startdate"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="소개:" />
+
+        //기간버튼!!!!!!!!!!!!!
+    <TextView
+        android:id="@+id/daterequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/field_radiogroup"
+        android:layout_toRightOf="@id/enddate"
+        android:layout_alignBaseline="@id/enddate"
+        android:textSize="10sp"
+        android:text="(210808 형태로 작성)" />
+
+    <TextView
+        android:id="@+id/dateand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/field_radiogroup"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/startdate"
+        android:text="~" />
+
+    <EditText
+        android:id="@+id/enddate"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/field_radiogroup"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/dateand"
+        android:hint="마감일" />
+
+    <EditText
+        android:id="@+id/startdate"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/field_radiogroup"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/date_textview"
+        android:layout_marginLeft="30dp"
+        android:hint="시작일" />
+
+    <TextView
+        android:id="@+id/date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/field_radiogroup"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="기간:" />
+    //제목버튼!!!!!!!!!!!!!!!!!!!!!1
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/contest_name"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="제목:" />
+
+    <EditText
+        android:id="@+id/contest_name"
+        android:layout_toRightOf="@id/name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="입력" />
+
+        //이미지버튼!!!!!!!!!!!!!!!1
+    <TextView
+        android:id="@+id/image_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/name_textview"
+        android:layout_marginTop="10dp"
+        android:text="이미지:" />
+
+    <ImageButton
+        android:id="@+id/contest_image"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/image_textview"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+        //field버튼!!!!!!!!!!!!!!
+    <TextView
+        android:id="@+id/field_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/contest_image"
+        android:text="분야:" />
+
+    <RadioGroup
+        android:id="@+id/field_radiogroup"
+        android:layout_below="@id/contest_image"
+        android:layout_toRightOf="@id/field_textview"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:layout_weight="1"
+            android:text="기획/아이디어"
+            android:id="@+id/rg_btn1"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:text="웹/모바일/IT"
+            android:id="@+id/rg_btn2"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:text="광고/마케팅"
+            android:id="@+id/rg_btn3"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:text="디자인/캐릭터"
+            android:id="@+id/rg_btn4"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_weight="1"
+            android:text="봉사활동"
+            android:id="@+id/rg_btn5"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_weight="1"
+            android:text="예체능"
+            android:id="@+id/rg_btn6"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    //header!!!!!!!!!!!!!!!
+    <RelativeLayout
+
+        android:id="@+id/write_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#7030A0"
+        android:layout_alignParentTop="true">
+
+
+        <Button
+            android:id="@+id/write"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="등록"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#7030A0"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
